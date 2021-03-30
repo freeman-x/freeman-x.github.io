@@ -1,6 +1,5 @@
 <html><head>
   <script data-ad-client="ca-pub-4148426468580031" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Git 教程</title><style>
 /* webkit printing magic: print all background colors */
 html {
