@@ -1,0 +1,644 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>使用Gitee</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9fb13cc8-0c79-4a4a-9ad0-9d1fe6205a29" class="page sans"><header><h1 class="page-title">使用Gitee</h1></header><div class="page-body"><p id="26f614f7-9f1d-4874-a6a2-2ec8cb54b5e4" class="">使用GitHub时，国内的用户经常遇到的问题是访问速度太慢，有时候还会出现无法连接的情况（原因你懂的）。</p><p id="d4ca0b1f-0867-4b84-b668-a4941fc081ac" class="">如果我们希望体验Git飞一般的速度，可以使用国内的Git托管服务——<a href="https://gitee.com/?utm_source=blog_lxf">Gitee</a>（<a href="https://gitee.com/?utm_source=blog_lxf">gitee.com</a>）。</p><p id="a68c1354-3df1-4953-8e4b-af560b494161" class="">和GitHub相比，Gitee也提供免费的Git仓库。此外，还集成了代码质量检测、项目演示等功能。对于团队协作开发，Gitee还提供了项目管理、代码托管、文档管理的服务，5人以下小团队免费。</p><p id="ab66acd7-9baa-46eb-be99-09c8bfc49a3a" class="">Gitee的免费版本也提供私有库功能，只是有5人的成员上限。</p><p id="e4f211cd-dde9-47e9-9a84-063f25deafde" class="">使用Gitee和使用GitHub类似，我们在Gitee上注册账号并登录后，需要先上传自己的SSH公钥。选择右上角用户头像 -&gt; 菜单“修改资料”，然后选择“SSH公钥”，填写一个便于识别的标题，然后把用户主目录下的<code>.ssh/id_rsa.pub</code>文件的内容粘贴进去：</p><figure id="a300bdbd-ac1a-4369-bf89-ae46cd0d6a22" class="image"><a href="https://www.liaoxuefeng.com/files/attachments/1163452910422880/l"><img src="https://www.liaoxuefeng.com/files/attachments/1163452910422880/l"/></a></figure><p id="8191df27-229f-4301-b65d-b99e0de66702" class="">点击“确定”即可完成并看到刚才添加的Key：</p><figure id="950bfed9-ec39-4e70-b31c-61d1dc216fe3" class="image"><a href="https://www.liaoxuefeng.com/files/attachments/1163453163108928/l"><img src="https://www.liaoxuefeng.com/files/attachments/1163453163108928/l"/></a></figure><p id="6c73301b-7ed2-48ca-9f6a-d4dd03458a28" class="">如果我们已经有了一个本地的git仓库（例如，一个名为learngit的本地库），如何把它关联到Gitee的远程库上呢？</p><p id="96c3d300-db11-4ecb-9b0d-9beddcff4d42" class="">首先，我们在Gitee上创建一个新的项目，选择右上角用户头像 -&gt; 菜单“控制面板”，然后点击“创建项目”：</p><figure id="8e1a86f6-4d3b-4f5f-8981-42828541724d" class="image"><a href="https://www.liaoxuefeng.com/files/attachments/1163453517527296/l"><img src="https://www.liaoxuefeng.com/files/attachments/1163453517527296/l"/></a></figure><p id="868d8713-2796-4829-9cbf-adc4a86ef273" class="">项目名称最好与本地库保持一致：</p><p id="15d0eafb-9509-4a46-b0c6-95066a5b96bc" class="">然后，我们在本地库上使用命令<code>git remote add</code>把它和Gitee的远程库关联：</p><pre id="435c3f23-5448-4b81-ab54-41cb93c4c3d0" class="code"><code>git remote add origin git@gitee.com:liaoxuefeng/learngit.git</code></pre><p id="820acd32-2022-4d01-a10a-19824d9c2f02" class="">之后，就可以正常地用<code>git push</code>和<code>git pull</code>推送了！</p><p id="2dafcc6c-78e9-460f-9004-6dca52f5879d" class="">如果在使用命令<code>git remote add</code>时报错：</p><pre id="68fefc32-9ab1-4098-800c-5debc2bcb7a7" class="code"><code>git remote add origin git@gitee.com:liaoxuefeng/learngit.git
+fatal: remote origin already exists.</code></pre><p id="f50f68a6-0776-4af9-ab30-60a0054389da" class="">这说明本地库已经关联了一个名叫<code>origin</code>的远程库，此时，可以先用<code>git remote -v</code>查看远程库信息：</p><pre id="1bda82a9-3430-4454-9220-a87136b39ebf" class="code"><code>git remote -v
+origin	git@github.com:michaelliao/learngit.git (fetch)
+origin	git@github.com:michaelliao/learngit.git (push)</code></pre><p id="68b38ce5-aebd-4f45-916f-7042d9be57b7" class="">可以看到，本地库已经关联了<code>origin</code>的远程库，并且，该远程库指向GitHub。</p><p id="b4725fdc-6ece-4c32-af00-eb5af89aa428" class="">我们可以删除已有的GitHub远程库：</p><pre id="a062cb1d-9c1e-4c97-9530-ea1e824ce4a2" class="code"><code>git remote rm origin</code></pre><p id="39002416-b0f0-478d-aa88-f362d9068996" class="">再关联Gitee的远程库（注意路径中需要填写正确的用户名）：</p><pre id="c4c45e8c-8844-4716-a365-6f4e0667e137" class="code"><code>git remote add origin git@gitee.com:liaoxuefeng/learngit.git</code></pre><p id="1986ee20-8624-42c4-af88-d9cae9890424" class="">此时，我们再查看远程库信息：</p><pre id="626cb8c4-abfc-43b4-950d-d43e06131b0a" class="code"><code>git remote -v
+origin	git@gitee.com:liaoxuefeng/learngit.git (fetch)
+origin	git@gitee.com:liaoxuefeng/learngit.git (push)</code></pre><p id="e3e01e7f-a3e3-4e22-8c97-b85a75c4df22" class="">现在可以看到，origin已经被关联到Gitee的远程库了。通过<code>git push</code>命令就可以把本地库推送到Gitee上。</p><p id="b4d1fdde-1642-43a5-987f-4e32d434afb6" class="">有的小伙伴又要问了，一个本地库能不能既关联GitHub，又关联Gitee呢？</p><p id="a2d202a8-1333-4040-9a5e-366b12c9d666" class="">答案是肯定的，因为git本身是分布式版本控制系统，可以同步到另外一个远程库，当然也可以同步到另外两个远程库。</p><p id="6d7646ab-54b4-4047-8755-d18ac2ef8c0d" class="">使用多个远程库时，我们要注意，git给远程库起的默认名称是<code>origin</code>，如果有多个远程库，我们需要用不同的名称来标识不同的远程库。</p><p id="38f3e2c9-36e4-476e-bad5-a2bbf4e24408" class="">仍然以<code>learngit</code>本地库为例，我们先删除已关联的名为<code>origin</code>的远程库：</p><pre id="79b263d9-de10-4770-8639-bce2259c5994" class="code"><code>git remote rm origin</code></pre><p id="aed3f628-b131-4dde-8489-bb11a33d8146" class="">然后，先关联GitHub的远程库：</p><pre id="9cfc648c-9a5f-439a-be07-0e36c891e4a4" class="code"><code>git remote add github git@github.com:michaelliao/learngit.git</code></pre><p id="7da92673-0dd3-4b1e-b048-141159f7e29f" class="">注意，远程库的名称叫<code>github</code>，不叫<code>origin</code>了。</p><p id="75d44b04-8d14-43f5-ac9b-442834ab0c2b" class="">接着，再关联Gitee的远程库：</p><pre id="152d75fd-a3e1-4da1-9179-a2e1f49f0e54" class="code"><code>git remote add gitee git@gitee.com:liaoxuefeng/learngit.git</code></pre><p id="ab844ee6-5554-4b94-aeb8-cade3e735dea" class="">同样注意，远程库的名称叫<code>gitee</code>，不叫<code>origin</code>。</p><p id="f783e850-6ad6-4430-aa8a-7273212842a8" class="">现在，我们用<code>git remote -v</code>查看远程库信息，可以看到两个远程库：</p><pre id="97bac097-4829-4f46-9cff-ac7349ba410e" class="code"><code>git remote -v
+gitee	git@gitee.com:liaoxuefeng/learngit.git (fetch)
+gitee	git@gitee.com:liaoxuefeng/learngit.git (push)
+github	git@github.com:michaelliao/learngit.git (fetch)
+github	git@github.com:michaelliao/learngit.git (push)</code></pre><p id="a087ba7b-777b-496b-9a64-0b82835c5b57" class="">如果要推送到GitHub，使用命令：</p><pre id="565f1845-cb2d-4fe1-b8ef-817b53d1f3ac" class="code"><code>git push github master</code></pre><p id="6dec713e-6606-478d-b828-5432b2c52625" class="">如果要推送到Gitee，使用命令：</p><pre id="30e558d6-748e-4243-9aa2-06cac31d0f6f" class="code"><code>git push gitee master</code></pre><p id="f303b348-65a2-4479-a9ff-41658c6cc6d6" class="">这样一来，我们的本地库就可以同时与多个远程库互相同步：</p><pre id="45017a93-9444-4dc4-bbbf-b3763f07ae93" class="code"><code>┌─────────┐ ┌─────────┐
+│ GitHub  │ │  Gitee  │
+└─────────┘ └─────────┘
+     ▲           ▲
+     └─────┬─────┘
+           │
+    ┌─────────────┐
+    │ Local Repo  │
+    └─────────────┘</code></pre><p id="9c159e4b-9f02-4099-a319-dd3ebce7083d" class="">Gitee也同样提供了Pull request功能，可以让其他小伙伴参与到开源项目中来。你可以通过Fork我的仓库：<a href="https://gitee.com/liaoxuefeng/learngit?utm_source=blog_lxf">https://gitee.com/liaoxuefeng/learngit</a>，创建一个<code>your-gitee-id.txt</code>的文本文件， 写点自己学习Git的心得，然后推送一个pull request给我，这个仓库会在Gitee和GitHub做双向同步。</p></div></article></body></html>
