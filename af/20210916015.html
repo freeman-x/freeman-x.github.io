@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 	网页显示的标题名称	 -->
+    <title>Tennis</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/hivideo.css" />
+    <script type="text/javascript" src="hivideo.js"></script>
+<!--     设置播放器窗口的尺寸	 -->
+    <style type="text/css">
+        .main-wrap{
+            margin: 0 auto;
+            min-width: 320px;
+            max-width: 2880px;
+        }
+
+        .main-wrap video{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrap">
+<!-- 	    播放器初始的参数	 -->
+        <video ishivideo="true" autoplay="false" isrotate="false" autoHide="true">
+<!-- 	        视频的播放源以及视频格式	 -->
+            <source src="https://itank.synology.me:8443/anf-sports-club/20210916/015.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>
+
+
