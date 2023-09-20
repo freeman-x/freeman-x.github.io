@@ -1,5 +1,6 @@
 # 2021-01-01 00:00
 # CUSTOM RULE
+# 2023-09-20 00:00
 
 # Client
 # > Proxy
@@ -50,20 +51,22 @@ DOMAIN-SUFFIX,alibaba-inc.com
 DOMAIN-SUFFIX,alibaba.com
 DOMAIN-SUFFIX,alibabacloud.com
 DOMAIN-SUFFIX,alibabausercontent.com
+DOMAIN-SUFFIX,alibabachengdun.com
 DOMAIN-SUFFIX,alicdn.com
-DOMAIN-SUFFIX,alikunlun.com
 DOMAIN-SUFFIX,alikunlun.com
 DOMAIN-SUFFIX,alipay.com
 DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,alitrip.com
 DOMAIN-SUFFIX,aliyun.com
 DOMAIN-SUFFIX,aliyuncs.com
-DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,amap.com
 DOMAIN-SUFFIX,autonavi.com
 DOMAIN-SUFFIX,dingtalk.com
 DOMAIN-SUFFIX,effirst.com
+DOMAIN-SUFFIX,ele.me
+DOMAIN-SUFFIX,elemecdn.com
 DOMAIN-SUFFIX,fliggy.com
+DOMAIN-SUFFIX,goofish.com
 DOMAIN-SUFFIX,hichina.com
 DOMAIN-SUFFIX,hichina.com
 DOMAIN-SUFFIX,mmstat.com
@@ -357,6 +360,7 @@ DOMAIN-SUFFIX,chushou.tv
 DOMAIN-SUFFIX,cmbchina.com
 DOMAIN-SUFFIX,cmbimg.com
 DOMAIN-SUFFIX,ctrip.com
+DOMAIN-SUFFIX,ctyunapi.cn
 DOMAIN-SUFFIX,dfcfw.com
 DOMAIN-SUFFIX,docschina.org
 DOMAIN-SUFFIX,douban.com
