@@ -193,11 +193,11 @@ DOMAIN-SUFFIX,icbc.com.cn
 DOMAIN-SUFFIX,mob.com
 DOMAIN-SUFFIX,omtrdc.net
 
-# > Sogo
+# Sogo
 DOMAIN-SUFFIX,sogo.com
 DOMAIN-SUFFIX,sogou.com
 DOMAIN-SUFFIX,sogoucdn.com
-# > Steam
+# Steam
 DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,steam-chat.com
 DOMAIN-SUFFIX,steamgames.com
@@ -217,7 +217,7 @@ DOMAIN-SUFFIX,zmzapi.com
 DOMAIN-SUFFIX,zmzapi.net
 DOMAIN-SUFFIX,zmzfile.com
 
-# > Content Delivery Network
+# Content Delivery Network
 DOMAIN-SUFFIX,ccgslb.com
 DOMAIN-SUFFIX,ccgslb.net
 DOMAIN-SUFFIX,chinanetcenter.com
@@ -226,7 +226,7 @@ DOMAIN-SUFFIX,ourdvs.com
 DOMAIN-SUFFIX,staticdn.net
 DOMAIN-SUFFIX,wangsu.com
 
-# > IP Query
+# IP Query
 DOMAIN-SUFFIX,ipip.net
 DOMAIN-SUFFIX,ip.la
 DOMAIN-SUFFIX,ip-cdn.com
@@ -234,12 +234,12 @@ DOMAIN-SUFFIX,ipv6-test.com
 DOMAIN-SUFFIX,test-ipv6.com
 DOMAIN-SUFFIX,whatismyip.com
 
-# > Speed Test
+# Speed Test
 # DOMAIN-SUFFIX,speedtest.net
 DOMAIN-SUFFIX,netspeedtestmaster.com
 DOMAIN,speedtest.macpaw.com
 
-# > Private Tracker
+# Private Tracker
 DOMAIN-SUFFIX,awesome-hd.me
 DOMAIN-SUFFIX,broadcasthe.net
 DOMAIN-SUFFIX,chdbits.co
@@ -264,7 +264,7 @@ DOMAIN-SUFFIX,springsunday.net
 DOMAIN-SUFFIX,tjupt.org
 DOMAIN-SUFFIX,totheglory.im
 
-# > Scholar
+# Scholar
 DOMAIN-SUFFIX,acm.org
 DOMAIN-SUFFIX,acs.org
 DOMAIN-SUFFIX,aip.org
@@ -623,4 +623,5 @@ IP-CIDR,182.106.137.0/24
 IP-CIDR,192.168.0.0/16
 IP-CIDR,203.119.169.0/24
 IP-CIDR,203.209.247.0/24
+
 GEOIP,CN
